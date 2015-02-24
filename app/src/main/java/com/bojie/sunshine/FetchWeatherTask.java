@@ -18,6 +18,7 @@ package com.bojie.sunshine;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
@@ -107,6 +108,7 @@ public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
      */
     long addLocation(String locationSetting, String cityName, double lat, double lon) {
         // Students: First, check if the location with this city name exists in the db
+        Cursor locationCursor = mContext.getContentResolver()
         // If it exists, return the current ID
         // Otherwise, insert it using the content resolver and the base URI
         return 0;
@@ -405,4 +407,7 @@ public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
             // New data is back from the server.  Hooray!
         }
     }
+
+
+
 }

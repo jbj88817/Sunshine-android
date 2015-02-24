@@ -84,6 +84,8 @@ public class WeatherContract {
         public static Uri buildLocationUri(long id) {
             return ContentUris.withAppendedId(CONTENT_URI, id);
         }
+
+
     }
 
     /* Inner class that defines the table contents of the weather table */
